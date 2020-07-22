@@ -41,7 +41,7 @@ int main()
 **output assembly code**
 
 ```javascript
-`
+
 .MODEL SMALL
 .STACK 100H
 .DATA 
