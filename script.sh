@@ -15,4 +15,4 @@ echo '4'
 g++ -o a.out y.o l.o -lfl -ly	#compiles the scanner and parser to create output file a.out; -lfl and -ly includes library files 					for lex and yacc(bison)
 
 echo '5'
-./a.out		# you will need to provide proper input files with ./a.out command as instructed in assignment specification
+./a.out	input.txt	# you will need to provide proper input files with ./a.out command as instructed in assignment specification

@@ -2,9 +2,10 @@
 #include<iostream>
 #include<stdlib.h>
 #include<string.h>
+#define YYSTYPE symbol_info*
 #include "1605069_symbol_info.h"
 #include "y.tab.h"
-
+//#define YYSTYPE symbol_info*
 
 using namespace std;
 
@@ -69,7 +70,7 @@ MULOP [*/%]
 
 {MULOP}	{
 			symbol_info *s= new  symbol_info(yytext, (char *)"MULOP");
-			yylval = (YYSTYPE)s;
+			yylval = s;
 			return MULOP;
 		}
 
@@ -83,14 +84,14 @@ MULOP [*/%]
 "==" |
 "!=" {
 		symbol_info *s= new  symbol_info(yytext, (char *)"RELOP");
-		yylval = (YYSTYPE)s;
+		yylval = s;
 		return RELOP;
 	}
 
 "&&"	|
 "||"	{
 			symbol_info *s= new  symbol_info(yytext, (char *)"LOGICOP");
-			yylval = (YYSTYPE)s;
+			yylval = s;
 			return LOGICOP;
 		}
 "!"		{	return NOT; }
@@ -110,18 +111,18 @@ MULOP [*/%]
 
 {integer}	{
 				symbol_info *s= new  symbol_info(yytext, (char *)"CONST_INT");
-				yylval = (YYSTYPE)s;
+				yylval = s;
 				return CONST_INT;
 			}
 {number} 	{	
 				symbol_info *s= new  symbol_info(yytext, (char *)"CONST_FLOAT");
-				yylval = (YYSTYPE)s;
+				yylval = s;
 				return CONST_FLOAT; 
 			}
 {id} 		{	 
 				
 				symbol_info *s= new symbol_info(yytext, (char *)"ID");
-				yylval = (YYSTYPE)s;
+				yylval = s;
 				
 				
 				return ID;
