@@ -1,7 +1,7 @@
 # C-Compiler
 A Custom Compiler for the C language made using the tools `bison` and `flex`
 that generates corresponding assembly code. It supports a subset of the C language,
-therefore not all syntaxes are supported. It can detect lexical errors, syntax errors, symantic errors and 
+therefore not all syntaxes are supported. It can detect lexical errors, syntax errors, semantic errors and 
 output them in a log file
 
 # How to use
