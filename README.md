@@ -25,7 +25,7 @@ You will need the followings installed in your machine
 
 **input code**
 
-`
+```javascript
 int main()
 {
     int a , b;
@@ -36,11 +36,11 @@ int main()
     println(sum);
     
 }
-`
+```
 
 **output assembly code**
 
-
+```javascript
 `
 .MODEL SMALL
 .STACK 100H
@@ -113,4 +113,4 @@ print_loop:
 outdec endp
 END MAIN
 
-`
+```
